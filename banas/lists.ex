@@ -35,6 +35,23 @@ defmodule M do
 
     display_list(words) # recursive function
 
+    IO.puts "---delete---"
+    # IO.puts
+    display_list(List.delete(words, "Random")) # deletes matching item in list
+
+    IO.puts "---delete_at---"
+    display_list(List.delete_at(words, 1)) # deletes item at index
+
+    IO.puts "--inster_at---"
+    display_list(List.insert_at(words, 4 ,"Yeah"))
+
+    IO.puts "first -> #{List.first(words)}"
+    IO.puts "last -> #{List.last(words)}"
+
+    # lists can have key value pairs
+    my_stats = [name: "Dereck", height: 6.25]
+
+    IO.inspect my_stats
   end
 
 
@@ -43,6 +60,6 @@ defmodule M do
     display_list(words_tail)
   end
 
-  def display_list([]), do: :ok
+  def display_list([]), do: nil
 
 end
